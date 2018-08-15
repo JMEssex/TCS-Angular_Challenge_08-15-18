@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
 
+  showDetails = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onFetchDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }
