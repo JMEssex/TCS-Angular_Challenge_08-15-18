@@ -10,9 +10,10 @@
         [(ngModel)]="userId">
       <label for="user_id_input">Enter a User Id</label>
       <button
-        class="waves-effect waves-light btn"
-        [disabled]="userIdEntered()"
-        (click)="resetUserIdForm()">Get User Details</button>
+      class="waves-effect waves-light btn"
+      [disabled]="userIdEntered()"
+      (click)="onSubmitRequest()">Get User Details</button>
     </div>
+    <span class="card-panel col red lighten-4 red-text text-darken-4" *ngIf="userResponseError">{{userResponseError}}</span>
   </form>
 <div>
