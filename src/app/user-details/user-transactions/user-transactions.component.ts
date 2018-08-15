@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-transactions',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserTransactionsComponent implements OnInit {
 
+  transactions = ['Transaction 1', 'Transaction 2', 'Transaction 3', 'Transaction 4', 'I wish this was not static.'];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  displayTransactions() {
+    // Take the input data from user-details.transactions after the "get" request, and then map over
+    // the array of objects which contains an "id", "userAccount", and "amount".
+    // EX: { "id": "4-005", "userAccount": "checking", "amount": 5.95}
+  }
 }

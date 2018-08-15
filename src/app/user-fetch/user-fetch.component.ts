@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UsersService } from '../shared/users.service';
 
 @Component({
@@ -31,9 +31,5 @@ export class UserFetchComponent implements OnInit {
       );
     this.userId = '';
     return this.userResponseError = '';
-  }
-
-  errorResponse() {
-
   }
 }

@@ -1,7 +1,8 @@
+<app-header></app-header>
 <div class="container">
-  <h1>{{ greeting }}</h1>
+  <br><br>
   <div class="row">
-    <app-user-fetch></app-user-fetch>
+    <app-user-fetch populateUserDetails="onPopulateUserDetails($event)"></app-user-fetch>
   </div>
   <hr>
   <app-user-details></app-user-details>

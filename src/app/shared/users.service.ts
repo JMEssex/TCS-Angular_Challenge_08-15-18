@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 @Injectable()
@@ -9,7 +9,7 @@ export class UsersService {
     return this.http.get(`http://localhost:3000/users/${userId}`)
       .pipe(
         map(
-          (response: HttpResponse<any[]>) => response
+          (response) => response
         )
       );
   }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+
+import { UserFetchComponent } from '../user-fetch/user-fetch.component';
 
 @Component({
   selector: 'app-user-details',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserDetailsComponent implements OnInit {
 
   showDetails = false;
+  showTransactions = false;
 
   constructor() { }
 
@@ -16,5 +19,9 @@ export class UserDetailsComponent implements OnInit {
 
   onFetchDetails() {
     this.showDetails = !this.showDetails;
+  }
+
+  showLastTransactions() {
+    this.showTransactions = !this.showTransactions;
   }
 }

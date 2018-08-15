@@ -8,13 +8,15 @@ import { UserFetchComponent } from './user-fetch/user-fetch.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserTransactionsComponent } from './user-details/user-transactions/user-transactions.component';
 import { UsersService } from './shared/users.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFetchComponent,
     UserDetailsComponent,
-    UserTransactionsComponent
+    UserTransactionsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
