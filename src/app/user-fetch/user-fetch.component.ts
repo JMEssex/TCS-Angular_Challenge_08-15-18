@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFetchComponent implements OnInit {
 
+  userId = '';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  userIdEntered() {
+    return this.userId === '';
+  }
+
+  resetUserIdForm() {
+    return this.userId = '';
+  }
 }

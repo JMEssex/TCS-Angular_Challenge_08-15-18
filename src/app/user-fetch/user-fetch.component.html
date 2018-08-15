@@ -1,3 +1,18 @@
-<p>
-  user-fetch works!
-</p>
+<div class="row">
+  <form class="col s12" action="" method="get">
+    <div class="input-field col s4">
+      <input
+        class="validate"
+        type="text"
+        maxlength="1"
+        placeholder="(Ex: 1 through 5)"
+        name="user_id_input"
+        [(ngModel)]="userId">
+      <label for="user_id_input">Enter a User Id</label>
+      <button
+        class="waves-effect waves-light btn"
+        [disabled]="userIdEntered()"
+        (click)="resetUserIdForm()">Get User Details</button>
+    </div>
+  </form>
+<div>
