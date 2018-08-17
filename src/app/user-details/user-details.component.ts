@@ -19,7 +19,6 @@ export class UserDetailsComponent implements OnInit {
 
   onFetchDetails() {
     this.showDetails = !this.showDetails;
-    
   }
 
   showLastTransactions() {
