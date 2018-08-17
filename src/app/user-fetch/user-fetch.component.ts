@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+
 import { UsersService } from '../shared/users.service';
 
 @Component({
@@ -9,7 +10,6 @@ import { UsersService } from '../shared/users.service';
 export class UserFetchComponent implements OnInit {
 
   userId = '';
-  userDetail = [];
   userResponseError = '';
 
   constructor(private usersService: UsersService) {
@@ -26,7 +26,9 @@ export class UserFetchComponent implements OnInit {
   onSubmitRequest() {
     this.usersService.getUserDetails(this.userId)
       .subscribe(
-        (user) => this.userDetail = user,
+        (user) => {
+          this.usersService.userDetails = user;
+        },
         (error) => this.userResponseError = 'We are only showing 5 accounts in our database. Try a User between 1 and 5. ;~)'
       );
     this.userId = '';

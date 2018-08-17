@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { UsersService } from '../../shared/users.service';
 
 @Component({
   selector: 'app-user-transactions',
@@ -9,7 +11,7 @@ export class UserTransactionsComponent implements OnInit {
 
   transactions = ['Transaction 1', 'Transaction 2', 'Transaction 3', 'Transaction 4', 'I wish this was not static.'];
 
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
   }
