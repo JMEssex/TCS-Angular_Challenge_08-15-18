@@ -1,21 +1,23 @@
 <div>
   <div class="row">
-    <div class="card-panel col s5">
-        <ul class="collection with-header">
-          <li class="collection-header"><h4>User Details</h4></li>
-          <li class="collection-item" *ngFor="let user of userInfo">
-            <div>
-              <h5>Name:</h5>
-              <h4 class="black-text">{{user.firstName}} {{user.lastName}}</h4>
-            </div>
-            <br><br>
-            <h5>Accounts Available:</h5>
-            <div>Checking:<span class="secondary-content teal-text darken-text-4">{{user.userAccounts.checking}}</span></div>
-            <div>Savings:<span class="secondary-content teal-text darken-text-4">{{user.userAccounts.savings}}</span></div>
-          </li>
-        </ul>
-      <button *ngIf="buttonTransactionCheck()" class="waves-effect waves-light btn" (click)="showLastTransactions()">Transactions</button>
-      <br><br>
+    <div *ngIf="showDetailsCheck()">
+      <div class="card-panel col s5">
+          <ul class="collection with-header">
+            <li class="collection-header"><h4>User Details</h4></li>
+            <li class="collection-item" *ngFor="let user of userInfo">
+              <div>
+                <h5>Name:</h5>
+                <h4 class="black-text">{{user.firstName}} {{user.lastName}}</h4>
+              </div>
+              <br><br>
+              <h5>Accounts Available:</h5>
+              <div>Checking:<span class="secondary-content teal-text darken-text-4">{{user.userAccounts.checking}}</span></div>
+              <div>Savings:<span class="secondary-content teal-text darken-text-4">{{user.userAccounts.savings}}</span></div>
+            </li>
+          </ul>
+        <button class="waves-effect waves-light btn right" (click)="showLastTransactions()">Transactions</button>
+        <br><br>
+      </div>
     </div>
     <div *ngIf="showTransactions">
         <div class="card-panel col s6 offset-s1"><app-user-transactions></app-user-transactions></div>

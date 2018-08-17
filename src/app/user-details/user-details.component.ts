@@ -18,7 +18,7 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  buttonTransactionCheck() {
+  showDetailsCheck() {
     return this.userInfo.length !== 0;
   }
   showLastTransactions() {
