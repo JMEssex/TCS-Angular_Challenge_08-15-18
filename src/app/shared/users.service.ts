@@ -6,13 +6,18 @@ import { map } from 'rxjs/operators';
 export class UsersService {
 
   userDetails;
+  userFetch = [];
 
   constructor(private http: HttpClient) {}
   getUserDetails(userId) {
     return this.http.get(`http://localhost:3000/users/${userId}`)
       .pipe(
         map(
-          (response) => response
+          (response) => {
+            if (this.userFetch.length === 1) { this.userFetch = []; }
+            this.userFetch.push(response);
+            return response;
+          }
         )
       );
   }

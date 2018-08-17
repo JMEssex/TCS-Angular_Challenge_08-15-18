@@ -12,9 +12,7 @@ export class UserFetchComponent implements OnInit {
   userId = '';
   userResponseError = '';
 
-  constructor(private usersService: UsersService) {
-
-  }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
   }
