@@ -7,11 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  greeting = 'Hello TCS-Citi-Team';
+  greeting = 'TCS-Citi-Team';
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

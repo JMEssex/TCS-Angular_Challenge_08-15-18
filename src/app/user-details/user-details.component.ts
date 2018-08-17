@@ -1,6 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { UserFetchComponent } from '../user-fetch/user-fetch.component';
+import { UsersService } from '../shared/users.service';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-user-details',
@@ -9,18 +10,17 @@ import { UserFetchComponent } from '../user-fetch/user-fetch.component';
 })
 export class UserDetailsComponent implements OnInit {
 
-  showDetails = false;
   showTransactions = false;
+  userInfo = this.usersService.userFetch;
 
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
   }
 
-  onFetchDetails() {
-    this.showDetails = !this.showDetails;
+  showDetailsCheck() {
+    return this.userInfo.length !== 0;
   }
-
   showLastTransactions() {
     this.showTransactions = !this.showTransactions;
   }

@@ -1,6 +1,10 @@
 <div>
   <ul class="collection with-header">
       <li class="collection-header"><h4>Transactions</h4></li>
-      <li class="collection-item" *ngFor="let transaction of transactions">{{transaction}}</li>
+      <li class="collection-item" *ngFor="let transaction of lastFour">
+        <div>Amount:<span class="secondary-content red-text darken-text-3">-{{transaction.amount}}</span></div>
+        <div>Account:<span class="secondary-content black-text">{{transaction.userAccount}}</span></div>
+        <div>Transaction ID:<span class="secondary-content black-text">{{transaction.id}}</span></div>
+      </li>
     </ul>
 <div>
